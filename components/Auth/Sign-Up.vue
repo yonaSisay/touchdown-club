@@ -74,7 +74,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "@/assets/css/variables";
 
 h2 {
@@ -181,16 +181,6 @@ h2 {
     :focus {
       outline: none;
     }
-  }
-}
-
-.checkbox {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  span {
-    color: $TDC-orange;
-    font-weight: 700;
   }
 }
 

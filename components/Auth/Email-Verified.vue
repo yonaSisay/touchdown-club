@@ -3,7 +3,7 @@
 <template>
   <div>
     <b-modal
-      id="verifyEmailPopover"
+      id="emailVerified"
       hide-header
       hide-footer
       modal-class="custom-modal"
@@ -11,18 +11,21 @@
       <b-col cols="12" class="content">
         <div class="icon-container">
           <span>
-            <Icon class="icon" icon="bi:send" />
+            <Icon class="icon" icon="lucide:mail-check" />
           </span>
         </div>
         <div class="heading-text">
-          <h2>Check your email</h2>
-          <p>We sent a verification link to</p>
-          <span>johndoe@gmail.com</span>
+          <h2>Email verified!</h2>
+          <p>
+            You’ve successfully verified your email.<br />Final step! Complete
+            setting up your account to be <br />
+            a member of the club.
+          </p>
         </div>
-        <b-row class="row"
-          >Didn’t receive the email? <span>Click to resend</span></b-row
-        >
-        <div class="button">Back to Touchdown Club Homepage</div>
+
+        <button class="button" v-b-modal.verifyEmailPopover type="submit">
+          Setup account
+        </button>
       </b-col>
     </b-modal>
   </div>
@@ -36,36 +39,37 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  h2 {
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-  }
-  p {
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
-    color: $light-gray;
-  }
-  span {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    color: $TDC-orange;
-    font-weight: 600;
-    line-height: 5px;
-  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  font-family: Goldman;
+}
+p {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: $light-gray;
 }
 
 .button {
-  border: 1px solid $extra-light;
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 30px;
-  font-size: 14px;
+  all: unset;
+  background-color: $TDC-orange;
+  border-color: $TDC-orange;
+  color: white;
+  font-weight: bold;
+  padding: 6px 10px;
+  width: 100% !important;
+  text-align: center;
   border-radius: 3px;
+  &:hover {
+    background-color: #e05a00;
+    border-color: $dark-TDC-orange;
+  }
+  :focus {
+    outline: none;
+  }
 }
 
 .row {
@@ -75,7 +79,7 @@
 }
 
 .icon-container {
-  background-color: rgba(255, 165, 0, 0.2);
+  background-color: rgba(51, 255, 0, 0.2);
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -83,7 +87,7 @@
   align-items: center;
   justify-content: center;
   .icon {
-    color: $TDC-orange;
+    color: $TDC-green;
     font-size: 35px;
   }
 }

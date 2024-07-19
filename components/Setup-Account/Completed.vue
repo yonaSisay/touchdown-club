@@ -2,8 +2,10 @@
 
 <template>
   <div>
+    <button v-b-modal.completedSetup>completed Account</button>
+
     <b-modal
-      id="verifyEmailPopover"
+      id="completedSetup"
       hide-header
       hide-footer
       modal-class="custom-modal"
@@ -11,17 +13,13 @@
       <b-col cols="12" class="content">
         <div class="icon-container">
           <span>
-            <Icon class="icon" icon="bi:send" />
+            <Icon class="icon" icon="lucide:mail-check" />
           </span>
         </div>
         <div class="heading-text">
-          <h2>Check your email</h2>
-          <p>We sent a verification link to</p>
-          <span>johndoe@gmail.com</span>
+          <h2>Completed account setup</h2>
+          <p>You’ve successfully completed your account setup.</p>
         </div>
-        <b-row class="row"
-          >Didn’t receive the email? <span>Click to resend</span></b-row
-        >
         <div class="button">Back to Touchdown Club Homepage</div>
       </b-col>
     </b-modal>
@@ -36,25 +34,24 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  h2 {
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-  }
-  p {
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
-    color: $light-gray;
-  }
-  span {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    color: $TDC-orange;
-    font-weight: 600;
-    line-height: 5px;
-  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  font-family: Goldman;
+}
+p {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: $light-gray;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .button {
@@ -68,14 +65,8 @@
   border-radius: 3px;
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .icon-container {
-  background-color: rgba(255, 165, 0, 0.2);
+  background-color: rgba(51, 255, 0, 0.2);
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -83,22 +74,8 @@
   align-items: center;
   justify-content: center;
   .icon {
-    color: $TDC-orange;
+    color: $TDC-green;
     font-size: 35px;
-  }
-}
-
-.custom-modal {
-  .modal-backdrop {
-    backdrop-filter: blur(50px);
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-
-  .modal-dialog {
-    max-width: 560px;
-  }
-  .modal-content {
-    padding: 40px;
   }
 }
 </style>

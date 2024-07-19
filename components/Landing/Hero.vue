@@ -4,7 +4,9 @@ export default {};
 <template>
   <div class="container">
     <TopNav />
-    <Auth-VerifyEmail />
+    <SetupAccount-BaseModal />
+    <SetupAccount-Completed />
+
     <!-- Hero page section -->
     <div class="hero">
       <h1>

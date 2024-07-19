@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "@/assets/css/variables";
 
 .outer_circle {
