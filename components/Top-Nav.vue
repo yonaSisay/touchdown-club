@@ -8,7 +8,8 @@ export default {
   <nav>
     <h1>touchd<span></span> wn club</h1>
     <ul>
-      <li v-for="i in 4" :key="i">Menu {{ i }}</li>
+      <li @click="$router.push('/about-us')">About Us</li>
+      <li v-for="i in 3" :key="i">Menu {{ i }}</li>
     </ul>
     <Auth-Login />
   </nav>
@@ -41,6 +42,10 @@ nav {
     margin: 0;
     padding: 0;
     list-style: none;
+    li {
+      color: white !important;
+      cursor: pointer;
+    }
   }
 }
 
