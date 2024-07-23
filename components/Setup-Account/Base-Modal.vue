@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from "vue";
 const currentStep = ref(1);
+const selectedPaymnetType = ref("card");
+
+function changePaymentType(e) {
+  selectedPaymnetType.value = e;
+}
 </script>
 
 <template>
@@ -20,12 +25,15 @@ const currentStep = ref(1);
         <SetupAccountStepper :currentStep="currentStep" />
         <SetupAccountYourTeam v-if="currentStep == 1" />
         <SetupAccountPersonelInfo v-if="currentStep == 2" />
-        <SetupAccountPayment v-if="currentStep == 3" />
+        <SetupAccountPayment
+          @paymentType="changePaymentType"
+          v-if="currentStep == 3"
+        />
         <div class="flex-between border-top">
           <button
             v-if="currentStep > 1"
             class="white-button"
-            @click="currentStep--"
+            @click="[currentStep--, (selectedPaymnetType = 'card')]"
           >
             Back
           </button>
@@ -35,8 +43,12 @@ const currentStep = ref(1);
             class="orange-button"
             @click="currentStep++"
             :disabled="currentStep == 3"
+            v-if="selectedPaymnetType == 'card'"
           >
             Next
+          </button>
+          <button v-else class="blue-button">
+            Pay with <img src="~/assets/light-paypal.png" alt="paypal" />
           </button>
         </div>
       </b-col>

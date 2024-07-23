@@ -4,8 +4,8 @@ export default {};
 <template>
   <div class="container">
     <TopNav />
-    <SetupAccount-BaseModal />
-    <SetupAccount-Completed />
+    <!-- <SetupAccount-BaseModal />
+    <SetupAccount-Completed /> -->
 
     <!-- Hero page section -->
     <div class="hero">

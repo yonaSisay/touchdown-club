@@ -67,7 +67,25 @@ body {
     background-color: #e05a00;
     border-color: $dark-TDC-orange;
   }
-  :focus {
+  &:focus {
+    outline: none;
+  }
+}
+
+.blue-button {
+  all: unset;
+  margin-top: 2rem;
+  background-color: rgba(54, 93, 174, 1);
+  border-color: rgba(54, 93, 174, 1);
+  color: white;
+  font-weight: bold;
+  padding: 8px 40px;
+  border-radius: 3px;
+  &:hover {
+    background-color: rgba(54, 93, 174, 0.8);
+    border-color: rgba(54, 93, 174, 0.8);
+  }
+  &:focus {
     outline: none;
   }
 }
@@ -94,10 +112,18 @@ body {
   color: $TDC-orange;
 }
 
+.text-black {
+  color: black;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   gap: 10px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
 }

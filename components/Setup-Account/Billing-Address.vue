@@ -112,13 +112,23 @@ const states = ref([
     <b-row class="mt-3">
       <b-col>
         <label class="label" for="input-none">Phone</label>
-        <b-form-input
-          id="input-none"
-          :state="null"
-          placeholder="Enter Phone Number"
-          class="custom-input"
-        ></b-form-input
-      ></b-col>
+        <b-input-group class="mt-3">
+          <b-form-input
+            id="input-none"
+            :state="null"
+            placeholder="Enter Phone Number"
+            class="custom-input"
+          ></b-form-input>
+          <b-input-group-append is-text>
+            <Icon
+              icon="iconoir:question-mark-circle"
+              width="20px"
+              v-b-tooltip.hover
+              title="In case we need to contact you about your team."
+            />
+          </b-input-group-append>
+        </b-input-group>
+      </b-col>
     </b-row>
   </div>
 </template>
