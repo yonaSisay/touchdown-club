@@ -1,3 +1,4 @@
+import PlayerRosterBio from '../Player-Roster-Bio.vue';
 <template>
   <div>
     <div class="blue">
@@ -26,7 +27,7 @@
             </div>
           </div>
           <ul>
-            <li>Player Roster/Bio <Icon icon="lucide:chevrons-right" /></li>
+            <PlayerRosterBio />
             <li>Coaches Bio <Icon icon="lucide:chevrons-right" /></li>
             <li>
               2023 Offense Statistics <Icon icon="lucide:chevrons-right" />
