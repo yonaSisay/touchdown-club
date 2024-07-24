@@ -12,7 +12,7 @@ import { ref } from "vue";
       <b-col>
         <h1 class="main-title">Central Catholic High School Roster</h1>
         <b-row cols="4">
-          <b-col class="mt-2" v-for="i in 8">
+          <b-col class="mt-2" v-for="i in 8" :key="i">
             <img src="~/assets/Rectangle 20.png" alt="images" />
           </b-col>
         </b-row>
