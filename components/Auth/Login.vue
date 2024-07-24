@@ -38,7 +38,7 @@
           ></b-form-input>
         </b-row>
         <div class="mt-4 recap-sign">
-          <img src="@/public/temp/reCAPTCHA v2 checkbox.png" alt="recaptcha" />
+          <img src="@/assets/temp/reCAPTCHA v2 checkbox.png" alt="recaptcha" />
         </div>
         <b-row class="checkbox mt-4">
           <b-form-checkbox
@@ -145,12 +145,10 @@ h2 {
 }
 
 .custom-col {
-  b-row {
-    label {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 22px;
-    }
+  label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 
@@ -177,7 +175,7 @@ h2 {
       background-color: #e05a00;
       border-color: $dark-TDC-orange;
     }
-    :focus {
+    &:focus {
       outline: none;
     }
   }

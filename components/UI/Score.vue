@@ -11,11 +11,11 @@ const props = defineProps({
   <div class="schedule-score">
     <div class="team-name text-end"><span>Central Catholic HS</span></div>
     <div class="team-score">
-      <img src="@/public/images/central-logo.png" alt="central logo" />
+      <img src="@/assets/images/central-logo.png" alt="central logo" />
       <div :class="isScore ? '' : 'is-schedule'">
         {{ isScore ? "12 - 0" : "N/A" }}
       </div>
-      <img src="@/public/images/east-logo.png" alt="east logo" />
+      <img src="@/assets/images/east-logo.png" alt="east logo" />
     </div>
     <div class="team-name text-start"><span>EAST Catholic HS</span></div>
   </div>

@@ -6,7 +6,7 @@ import PlayerRosterBio from '../Player-Roster-Bio.vue';
       <div class="grid-cols-2">
         <div class="left-column">
           <img
-            src="@/public/images/central-catholic.png"
+            src="@/assets/images/central-catholic.png"
             alt="central catholic logo"
           />
           <div class="stats-container">
@@ -42,7 +42,7 @@ import PlayerRosterBio from '../Player-Roster-Bio.vue';
         </div>
       </div>
     </div>
-    <img class="player-image" src="@/public/images/player.png" alt="player" />
+    <img class="player-image" src="@/assets/images/player.png" alt="player" />
   </div>
 </template>
 

@@ -67,7 +67,7 @@ p {
     background-color: #e05a00;
     border-color: $dark-TDC-orange;
   }
-  :focus {
+  &:focus {
     outline: none;
   }
 }

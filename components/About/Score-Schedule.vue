@@ -104,7 +104,7 @@ h1 {
 }
 
 .wave {
-  background-image: url("@/public/images/wave-background.png");
+  background-image: url("@/assets/images/wave-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
